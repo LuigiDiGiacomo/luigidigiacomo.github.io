@@ -1,149 +1,154 @@
 /* ============================================================
    LUIGI DI GIACOMO — PORTFOLIO THEME
-   Compatibile con MkDocs Material — v2 fix visibilità
+   Minimal Dark + Green & White
    ============================================================ */
 
-/* --- Variabili colore --- */
+/* --- Palette principale --- */
 :root {
-  --md-primary-fg-color:        #00e5ff;
-  --md-primary-fg-color--light: #80ffff;
-  --md-primary-fg-color--dark:  #0097a7;
-  --md-accent-fg-color:         #7c4dff;
-  --md-default-bg-color:        #0d1117;
-  --md-default-fg-color:        #e6edf3;
-  --md-default-fg-color--light: #c9d1d9;
-  --md-default-fg-color--lighter: #8b949e;
-  --md-code-bg-color:           #161b22;
-  --md-code-fg-color:           #00e5ff;
+  /* Base */
+  --md-default-bg-color:        #121212;   /* sfondo quasi nero */
+  --md-default-fg-color:        #E0E0E0;   /* testo principale */
+  --md-default-fg-color--light: #F5F5F5;   /* bianco soft */
+  --md-default-fg-color--lighter: #B0B0B0; /* testo secondario */
+
+  /* Verde accent */
+  --md-primary-fg-color:        #22C55E;   /* verde principale */
+  --md-primary-fg-color--light: #4ADE80;
+  --md-primary-fg-color--dark:  #15803D;
+
+  /* Accent secondario (bianco) */
+  --md-accent-fg-color:         #FFFFFF;
+
+  /* Codice */
+  --md-code-bg-color:           #1E1E1E;
+  --md-code-fg-color:           #BBF7D0;   /* verde chiarissimo */
 }
 
-/* --- Forza dark mode --- */
+/* Forza schema scuro */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #0d1117;
-  --md-default-fg-color: #e6edf3;
+  --md-default-bg-color: #121212;
+  --md-default-fg-color: #E0E0E0;
 }
 
-/* --- FIX: testo generale sempre visibile --- */
+/* Background e testo generale */
 body,
 .md-main,
 .md-container,
 .md-content__inner {
-  background-color: #0d1117;
-  color: #e6edf3;
+  background-color: #121212;
+  color: #E0E0E0;
 }
 
 /* --- Header / Navbar --- */
 .md-header {
-  background: linear-gradient(90deg, #0d1117 0%, #161b22 100%);
-  border-bottom: 2px solid var(--md-primary-fg-color);
-  box-shadow: 0 2px 16px rgba(0, 229, 255, 0.15);
+  background: #121212;
+  border-bottom: 1px solid #2E2E2E;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .md-header__title {
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--md-primary-fg-color) !important;
+  color: #FFFFFF !important;           /* bianco pulito */
 }
 
-/* --- FIX: icona e input della barra di ricerca --- */
+/* --- Search bar / icona --- */
 .md-search__input {
-  background-color: #161b22 !important;
-  color: #e6edf3 !important;
-  border: 1px solid rgba(0, 229, 255, 0.3);
+  background-color: #1E1E1E !important;
+  color: #E0E0E0 !important;
+  border: 1px solid #2E2E2E;
   border-radius: 4px;
 }
 
 .md-search__input::placeholder {
-  color: #8b949e !important;
+  color: #777777 !important;
 }
 
 .md-search__icon {
-  color: var(--md-primary-fg-color) !important;
+  color: #22C55E !important;
 }
 
-/* FIX: risultati del dropdown di ricerca */
 .md-search__output {
-  background-color: #161b22 !important;
-  border: 1px solid rgba(0, 229, 255, 0.2);
+  background-color: #1E1E1E !important;
+  border: 1px solid #2E2E2E;
 }
 
 .md-search-result__article,
 .md-search-result__title,
 .md-search-result__teaser {
-  color: #e6edf3 !important;
-  background-color: #161b22 !important;
+  color: #E0E0E0 !important;
+  background-color: #1E1E1E !important;
 }
 
 .md-search-result__item:hover {
-  background-color: #21262d !important;
+  background-color: #232323 !important;
 }
 
-/* --- FIX: testo nella sidebar e nav --- */
+/* --- Sidebar / Navigazione --- */
 .md-sidebar {
-  background-color: #0d1117;
+  background-color: #121212;
 }
 
 .md-nav__title {
-  color: #e6edf3 !important;
-  background-color: #0d1117 !important;
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
 }
 
 .md-nav__link {
-  color: #8b949e;
+  color: #B0B0B0;
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
 .md-nav__link:hover,
 .md-nav__link--active {
-  color: var(--md-primary-fg-color) !important;
+  color: #22C55E !important;
   padding-left: 6px;
-  border-left: 2px solid var(--md-primary-fg-color);
+  border-left: 2px solid #22C55E;
 }
 
-/* --- Contenuto principale --- */
+/* --- Contenuto --- */
 .md-content {
-  background-color: #0d1117;
+  background-color: #121212;
 }
 
 .md-typeset h1 {
-  color: var(--md-primary-fg-color);
+  color: #FFFFFF;
   font-size: 2.2rem;
-  letter-spacing: 1px;
-  border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #2E2E2E;
   padding-bottom: 0.4rem;
-  text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
 }
 
 .md-typeset h2 {
-  color: var(--md-accent-fg-color);
-  font-size: 1.5rem;
+  color: #E0E0E0;
+  font-size: 1.6rem;
   margin-top: 2rem;
 }
 
 .md-typeset h3 {
-  color: #80ffff;
+  color: #22C55E;
 }
 
 .md-typeset p,
 .md-typeset li {
-  color: #c9d1d9;
+  color: #D4D4D4;
   line-height: 1.8;
 }
 
 /* --- Link --- */
 .md-typeset a {
-  color: var(--md-primary-fg-color);
+  color: #22C55E;
   text-decoration: none;
-  border-bottom: 1px dashed rgba(0, 229, 255, 0.4);
+  border-bottom: 1px dashed rgba(34, 197, 94, 0.4);
   transition: border-color 0.2s;
 }
 
 .md-typeset a:hover {
-  border-bottom: 1px solid var(--md-primary-fg-color);
+  border-bottom: 1px solid #22C55E;
 }
 
-/* --- Blocchi di codice --- */
+/* --- Codice --- */
 .md-typeset code {
   background: var(--md-code-bg-color);
   color: var(--md-code-fg-color);
@@ -153,36 +158,35 @@ body,
 }
 
 .md-typeset pre {
-  background: #161b22;
-  border: 1px solid rgba(0, 229, 255, 0.2);
-  border-radius: 8px;
+  background: #1E1E1E;
+  border: 1px solid #2E2E2E;
+  border-radius: 6px;
 }
 
 /* --- Blockquote --- */
 .md-typeset blockquote {
-  border-left: 4px solid var(--md-accent-fg-color);
-  background: #161b22;
+  border-left: 3px solid #22C55E;
+  background: #181818;
   padding: 0.8rem 1.2rem;
-  border-radius: 0 8px 8px 0;
-  color: #8b949e;
+  border-radius: 0 6px 6px 0;
+  color: #B0B0B0;
   font-style: italic;
 }
 
 /* --- Footer --- */
 .md-footer {
-  background: #0d1117;
-  border-top: 1px solid rgba(0, 229, 255, 0.15);
-  color: #8b949e;
+  background: #121212;
+  border-top: 1px solid #2E2E2E;
+  color: #777777;
 }
 
 .md-footer-meta {
-  background: #010409;
+  background: #0A0A0A;
 }
 
-/* FIX: testo footer visibile */
 .md-footer__link,
 .md-footer-meta__inner {
-  color: #8b949e !important;
+  color: #777777 !important;
 }
 
 /* --- Tabelle --- */
@@ -192,23 +196,23 @@ body,
 }
 
 .md-typeset th {
-  background: #161b22;
-  color: var(--md-primary-fg-color);
-  border-bottom: 2px solid var(--md-primary-fg-color);
+  background: #1E1E1E;
+  color: #FFFFFF;
+  border-bottom: 2px solid #22C55E;
   padding: 10px 14px;
 }
 
 .md-typeset td {
-  background: #0d1117;
-  border-bottom: 1px solid #21262d;
+  background: #121212;
+  border-bottom: 1px solid #2E2E2E;
   padding: 8px 14px;
-  color: #c9d1d9;
+  color: #D4D4D4;
 }
 
 /* --- Scrollbar --- */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-track { background: #121212; }
 ::-webkit-scrollbar-thumb {
-  background: var(--md-primary-fg-color);
+  background: #22C55E;
   border-radius: 3px;
 }
