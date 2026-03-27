@@ -5,7 +5,6 @@ site_author: Luigi Di Giacomo
 theme:
   name: material       # oppure 'readthedocs' o 'mkdocs'
   language: it
-  favicon: assets/favicon.png
 
 nav:
   - Home: index.md
