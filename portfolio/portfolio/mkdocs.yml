@@ -1,0 +1,16 @@
+site_name: Luigi Di Giacomo | Portfolio
+site_url: # ci stiamo lavorando
+site_author: Luigi Di Giacomo
+
+theme:
+  name: material       # oppure 'readthedocs' o 'mkdocs'
+  language: it
+
+nav:
+  - Home: index.md
+  - Esperienze lavorative: esperienze.md
+  - I miei obiettivi: obiettivi.md
+  - Altro: info.md
+
+extra_css:
+  - style.css
