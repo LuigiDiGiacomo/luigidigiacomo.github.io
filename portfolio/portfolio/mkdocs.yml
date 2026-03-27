@@ -5,12 +5,18 @@ site_author: Luigi Di Giacomo
 theme:
   name: material       # oppure 'readthedocs' o 'mkdocs'
   language: it
+  custom_dir: overrides
 
 nav:
   - Home: index.md
   - Le mie esperienze: esperienze.md
   - I miei obiettivi: obiettivi.md
   - Altro: info.md
+
+extra:
+  footer_links:
+   - text: "Email"
+     href: "mailto:luigi_digiacomo@outlook.com"
 
 extra_css:
   - style.css
