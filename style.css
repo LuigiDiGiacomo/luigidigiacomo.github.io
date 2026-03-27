@@ -17,7 +17,7 @@
 
 /* --- Forza dark mode anche senza palette --- */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #0d1117;
+  --md-default-bg-color: #d1d800;
   --md-default-fg-color: #e6edf3;
 }
 
