@@ -1,24 +1,35 @@
 /* ============================================================
    LUIGI DI GIACOMO — PORTFOLIO THEME
-   Compatibile con MkDocs Material
+   Compatibile con MkDocs Material — v2 fix visibilità
    ============================================================ */
 
-/* --- Variabili colore (schema scuro cybersecurity) --- */
+/* --- Variabili colore --- */
 :root {
-  --md-primary-fg-color:        #00e5ff;   /* ciano neon */
+  --md-primary-fg-color:        #00e5ff;
   --md-primary-fg-color--light: #80ffff;
   --md-primary-fg-color--dark:  #0097a7;
-  --md-accent-fg-color:         #7c4dff;   /* viola accent */
-  --md-default-bg-color:        #0d1117;   /* sfondo quasi-nero */
-  --md-default-fg-color:        #e6edf3;   /* testo chiaro */
-  --md-code-bg-color:           #161b22;   /* sfondo codice */
+  --md-accent-fg-color:         #7c4dff;
+  --md-default-bg-color:        #0d1117;
+  --md-default-fg-color:        #e6edf3;
+  --md-default-fg-color--light: #c9d1d9;
+  --md-default-fg-color--lighter: #8b949e;
+  --md-code-bg-color:           #161b22;
   --md-code-fg-color:           #00e5ff;
 }
 
-/* --- Forza dark mode anche senza palette --- */
+/* --- Forza dark mode --- */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #d1d800;
+  --md-default-bg-color: #0d1117;
   --md-default-fg-color: #e6edf3;
+}
+
+/* --- FIX: testo generale sempre visibile --- */
+body,
+.md-main,
+.md-container,
+.md-content__inner {
+  background-color: #0d1117;
+  color: #e6edf3;
 }
 
 /* --- Header / Navbar --- */
@@ -35,7 +46,49 @@
   color: var(--md-primary-fg-color) !important;
 }
 
-/* --- Navigazione laterale --- */
+/* --- FIX: icona e input della barra di ricerca --- */
+.md-search__input {
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 4px;
+}
+
+.md-search__input::placeholder {
+  color: #8b949e !important;
+}
+
+.md-search__icon {
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* FIX: risultati del dropdown di ricerca */
+.md-search__output {
+  background-color: #161b22 !important;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.md-search-result__article,
+.md-search-result__title,
+.md-search-result__teaser {
+  color: #e6edf3 !important;
+  background-color: #161b22 !important;
+}
+
+.md-search-result__item:hover {
+  background-color: #21262d !important;
+}
+
+/* --- FIX: testo nella sidebar e nav --- */
+.md-sidebar {
+  background-color: #0d1117;
+}
+
+.md-nav__title {
+  color: #e6edf3 !important;
+  background-color: #0d1117 !important;
+}
+
 .md-nav__link {
   color: #8b949e;
   transition: color 0.2s ease, padding-left 0.2s ease;
@@ -59,6 +112,7 @@
   letter-spacing: 1px;
   border-bottom: 1px solid rgba(0, 229, 255, 0.25);
   padding-bottom: 0.4rem;
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
 }
 
 .md-typeset h2 {
@@ -104,7 +158,7 @@
   border-radius: 8px;
 }
 
-/* --- Blockquote / Citazioni --- */
+/* --- Blockquote --- */
 .md-typeset blockquote {
   border-left: 4px solid var(--md-accent-fg-color);
   background: #161b22;
@@ -118,11 +172,17 @@
 .md-footer {
   background: #0d1117;
   border-top: 1px solid rgba(0, 229, 255, 0.15);
-  color: #484f58;
+  color: #8b949e;
 }
 
 .md-footer-meta {
   background: #010409;
+}
+
+/* FIX: testo footer visibile */
+.md-footer__link,
+.md-footer-meta__inner {
+  color: #8b949e !important;
 }
 
 /* --- Tabelle --- */
@@ -145,19 +205,10 @@
   color: #c9d1d9;
 }
 
-/* --- Scrollbar personalizzata (webkit) --- */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0d1117;
-}
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
 ::-webkit-scrollbar-thumb {
   background: var(--md-primary-fg-color);
   border-radius: 3px;
-}
-
-/* --- Glow effect sui titoli h1 --- */
-.md-typeset h1 {
-  text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
 }
