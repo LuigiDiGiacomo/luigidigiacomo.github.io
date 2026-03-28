@@ -1,43 +1,38 @@
-/* Sfondo e testo della barra di ricerca */
-.md-search__input {
-  background-color: #111827;      /* sfondo (es. quasi nero) */
-  color: #f9fafb;                 /* testo chiaro */
-}
+/* ============================
+   Ricerca MkDocs Material
+   ============================ */
 
-/* Placeholder "Search" */
-.md-search__input::placeholder {
-  color: #9ca3af;
-}
-
-/* Pannello risultati ricerca */
+/* Overlay e pannello della ricerca */
+.md-search__overlay,
 .md-search__inner,
+.md-dialog,
 .md-search__output {
-  background-color: #020617;      /* sfondo pannello */
+  background-color: #020617 !important;  /* sfondo scuro */
 }
 
-/* Sfondo overlay di ricerca (il riquadro grande bianco) */
-.md-search__inner {
-  background-color: #020617;      /* sfondo scuro */
+/* Barra di ricerca in alto */
+.md-search__form {
+  background-color: #020617 !important;
 }
 
-/* Area risultati */
-.md-search__output {
-  background-color: #020617;
-}
-
-/* Input di ricerca */
+/* Input della ricerca */
 .md-search__input {
-  background-color: #111827;
-  color: #f9fafb;
+  background-color: #020617 !important;
+  color: #f9fafb !important;            /* testo chiaro */
 }
 
 .md-search__input::placeholder {
-  color: #9ca3af;
+  color: #9ca3af !important;           /* placeholder grigio */
 }
 
-/* Risultati, titoli, testo */
+/* Testo nei risultati */
 .md-search-result__meta,
 .md-search-result__title,
 .md-search-result__teaser {
-  color: #e5e7eb;
+  color: #e5e7eb !important;
+}
+
+/* Separatore orizzontale nei risultati */
+.md-search-result__separator {
+  border-color: #111827 !important;
 }
