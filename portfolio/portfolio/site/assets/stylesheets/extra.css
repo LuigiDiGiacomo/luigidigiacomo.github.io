@@ -1,20 +1,32 @@
-/* Barra di input (sopra) */
+/* === Ricerca: allineata ai colori del sito === */
+
+/* Barra in alto (come la navbar) */
 .md-search__form,
 .md-search__input {
-  background-color: #111827 !important;  /* scuro, come navbar */
-  color: #f9fafb !important;
+  background-color: #020617 !important;   /* sfondo molto scuro */
+  color: #f9fafb !important;              /* testo chiaro */
 }
 
 .md-search__input::placeholder {
-  color: #9ca3af !important;
+  color: #9ca3af !important;              /* grigio medio */
 }
 
-/* Contenitore dei risultati (parte grigio chiaro in basso) */
+/* Contenitore risultati (come il body, un filo più chiaro) */
 .md-search__scrollwrap {
-  background-color: #020617 !important;  /* ancora più scuro */
+  background-color: #111827 !important;
 }
 
-/* Testo "Scrivi per iniziare a cercare" */
+/* Testo "1 documento trovato", "Scrivi per iniziare a cercare" ecc. */
 .md-search-result__meta {
   color: #e5e7eb !important;
+}
+
+/* Titoli delle pagine nei risultati */
+.md-search-result__title {
+  color: #f9fafb !important;
+}
+
+/* Testo descrittivo/anteprima */
+.md-search-result__teaser {
+  color: #d1d5db !important;
 }
