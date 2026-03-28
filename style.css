@@ -273,6 +273,20 @@ nav.md-nav--primary {
   border: none !important;
 }
 
+/* Scrollbar verticale dentro il pannello di ricerca */
+.md-search__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-track {
+  background: var(--ld-bg);
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-thumb {
+  background: var(--ld-green);
+  border-radius: 3px;
+}
+
 /* ================== BOTTONI / CTA ================== */
 
 /* Base button */
