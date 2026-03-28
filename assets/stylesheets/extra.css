@@ -1,0 +1,16 @@
+/* Sfondo e testo della barra di ricerca */
+.md-search__input {
+  background-color: #111827;      /* sfondo (es. quasi nero) */
+  color: #f9fafb;                 /* testo chiaro */
+}
+
+/* Placeholder "Search" */
+.md-search__input::placeholder {
+  color: #9ca3af;
+}
+
+/* Pannello risultati ricerca */
+.md-search__inner,
+.md-search__output {
+  background-color: #020617;      /* sfondo pannello */
+}
