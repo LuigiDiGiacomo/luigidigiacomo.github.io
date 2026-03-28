@@ -272,3 +272,38 @@ nav.md-nav--primary {
   box-shadow: none !important;
   border: none !important;
 }
+
+/* ================== BOTTONI / CTA ================== */
+
+/* Base button */
+.md-typeset .md-button {
+  border-radius: 999px;                 /* pill shape */
+  border: 1px solid var(--ld-green);
+  color: var(--ld-green-light);
+  background: transparent;
+  font-weight: 500;
+  padding: 0.45rem 1.2rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Hover stato base */
+.md-typeset .md-button:hover {
+  background: rgba(22, 163, 74, 0.12);
+  border-color: var(--ld-green-light);
+  color: var(--ld-green-light);
+}
+
+/* Primary (pieno) */
+.md-typeset .md-button--primary {
+  background: var(--ld-green);
+  color: var(--ld-white);
+  border-color: var(--ld-green);
+}
+
+/* Hover primary */
+.md-typeset .md-button--primary:hover {
+  background: var(--ld-green-light);
+  border-color: var(--ld-green-light);
+  color: var(--ld-white);
+}

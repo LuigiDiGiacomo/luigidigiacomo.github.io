@@ -12,13 +12,10 @@ nav:
   - Le mie esperienze: esperienze.md
   - I miei obiettivi: obiettivi.md
   - Altro: info.md
-
-extra:
-  footer_links:
-   - text: "Email"
-     href: "mailto:luigi_digiacomo@outlook.com"
   
-
 extra_css:
   - style.css
   - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
