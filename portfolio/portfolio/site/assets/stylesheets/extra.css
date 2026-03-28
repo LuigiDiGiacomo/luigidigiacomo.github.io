@@ -14,3 +14,30 @@
 .md-search__output {
   background-color: #020617;      /* sfondo pannello */
 }
+
+/* Sfondo overlay di ricerca (il riquadro grande bianco) */
+.md-search__inner {
+  background-color: #020617;      /* sfondo scuro */
+}
+
+/* Area risultati */
+.md-search__output {
+  background-color: #020617;
+}
+
+/* Input di ricerca */
+.md-search__input {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.md-search__input::placeholder {
+  color: #9ca3af;
+}
+
+/* Risultati, titoli, testo */
+.md-search-result__meta,
+.md-search-result__title,
+.md-search-result__teaser {
+  color: #e5e7eb;
+}
