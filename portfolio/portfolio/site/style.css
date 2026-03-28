@@ -273,6 +273,35 @@ nav.md-nav--primary {
   border: none !important;
 }
 
+/* Scrollbar verticale dentro il pannello di ricerca */
+.md-search__scrollwrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-track {
+  background: var(--ld-bg);
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-thumb {
+  background: var(--ld-green);
+  border-radius: 3px;
+}
+
+.md-search__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: var(--ld-green-light);
+}
+
+/* Supporto standard (Firefox, ecc.) */
+.md-search__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ld-green) var(--ld-bg);
+}
+
+/* Quando è in hover/focus, usa il verde chiaro, non il blu del tema */
+.md-search__scrollwrap:hover {
+  scrollbar-color: var(--ld-green-light) var(--ld-bg);
+}
+
 /* ================== BOTTONI / CTA ================== */
 
 /* Base button */
