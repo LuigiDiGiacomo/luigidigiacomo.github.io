@@ -1,23 +1,4 @@
-/* Barra input in alto */
-.md-search__form {
-  background-color: #020617 !important;
-}
-
-.md-search__input {
-  background-color: #020617 !important;
-  color: #f9fafb !important;
-}
-
-.md-search__input::placeholder {
-  color: #9ca3af !important;
-}
-
-/* Box dei risultati */
-.md-search__output {
-  background-color: #020617 !important;
-}
-
-/* Testo dentro i risultati */
+/* TEST: cambia colore al testo meta della ricerca */
 .md-search-result__meta {
-  color: #e5e7eb !important;
+  color: red !important;
 }
