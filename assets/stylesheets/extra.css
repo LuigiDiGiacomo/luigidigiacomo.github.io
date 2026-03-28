@@ -1,4 +1,9 @@
-/* TEST: cambia colore al testo meta della ricerca */
+/* Testo meta (già funzionante, togliamo il rosso) */
 .md-search-result__meta {
-  color: red !important;
+  color: #e5e7eb !important;  /* grigio chiaro leggibile */
+}
+
+/* Sfondo del pannello di ricerca (quello bianco) */
+.md-search__output {
+  background-color: #020617 !important;  /* scuro come il sito */
 }
