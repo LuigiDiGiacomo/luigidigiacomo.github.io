@@ -424,10 +424,29 @@ nav.md-nav--primary {
 
 /* ====== FILM NEL POPUP: ICONA TONDA + TITOLO ====== */
 
+.ld-movie-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;           /* più spazio tra i film */
+  margin-top: 0.8rem;
+}
+
+.ld-movie {
+  display: flex;
+  align-items: center;   /* testo centrato rispetto all'immagine */
+  gap: 0.9rem;           /* distanza orizzontale img-testo */
+}
+
 .ld-movie__img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--ld-green);
+  border: 3px solid var(--ld-text-muted);
+}
+
+.ld-movie__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ld-text-soft);
 }
