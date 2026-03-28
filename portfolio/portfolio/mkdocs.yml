@@ -17,6 +17,7 @@ extra:
   footer_links:
    - text: "Email"
      href: "mailto:luigi_digiacomo@outlook.com"
+  
 
 extra_css:
   - style.css

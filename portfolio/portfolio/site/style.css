@@ -1,218 +1,274 @@
 /* ============================================================
    LUIGI DI GIACOMO — PORTFOLIO THEME
-   Minimal Dark + Green & White
+   Single Gray Background + Mono Green (nav uniformi)
    ============================================================ */
 
-/* --- Palette principale --- */
+/* --- Palette --- */
 :root {
-  /* Base */
-  --md-default-bg-color:        #121212;   /* sfondo quasi nero */
-  --md-default-fg-color:        #E0E0E0;   /* testo principale */
-  --md-default-fg-color--light: #F5F5F5;   /* bianco soft */
-  --md-default-fg-color--lighter: #B0B0B0; /* testo secondario */
+  --ld-bg:            #121212;   /* unico sfondo per tutto */
+  --ld-header:        #1b1b1b;   /* header leggermente diverso */
+  --ld-drawer:        #1b1b1b;   /* sfondo menu hamburger */
+  --ld-border-subtle: #262626;
 
-  /* Verde accent */
-  --md-primary-fg-color:        #22C55E;   /* verde principale */
-  --md-primary-fg-color--light: #4ADE80;
-  --md-primary-fg-color--dark:  #15803D;
+  --ld-text-main:     #f9fafb;
+  --ld-text-soft:     #e5e7eb;
+  --ld-text-muted:    #9ca3af;
 
-  /* Accent secondario (bianco) */
-  --md-accent-fg-color:         #FFFFFF;
+  --ld-green:         #16a34a;
+  --ld-green-light:   #22c55e;
 
-  /* Codice */
-  --md-code-bg-color:           #1E1E1E;
-  --md-code-fg-color:           #BBF7D0;   /* verde chiarissimo */
+  --ld-white:         #ffffff;
+
+  --ld-code-bg:       #1e1e1e;
+  --ld-code-fg:       #bbf7d0;
 }
 
-/* Forza schema scuro */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #121212;
-  --md-default-fg-color: #E0E0E0;
+  --md-default-bg-color: var(--ld-bg);
+  --md-default-fg-color: var(--ld-text-main);
 }
 
-/* Background e testo generale */
+/* ================== SFONDO UNICO (navbar + contenuto) ================== */
+
 body,
 .md-main,
 .md-container,
-.md-content__inner {
-  background-color: #121212;
-  color: #E0E0E0;
+.md-content__inner,
+.md-content,
+.md-sidebar--secondary,
+.md-sidebar--secondary .md-sidebar__scrollwrap,
+.md-sidebar--secondary .md-sidebar__inner,
+nav.md-nav--secondary,
+.ld-footer {
+  background-color: var(--ld-bg) !important;
+  color: var(--ld-text-main);
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* --- Header / Navbar --- */
+/* Sidebar PRIMARIA (sinistra) – forza stesso colore dello sfondo */
+.md-sidebar--primary,
+.md-sidebar--primary .md-sidebar__scrollwrap,
+.md-sidebar--primary .md-sidebar__inner,
+nav.md-nav--primary {
+  background-color: var(--ld-bg) !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ================== HEADER ================== */
+
 .md-header {
-  background: #121212;
-  border-bottom: 1px solid #2E2E2E;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  background-color: var(--ld-header) !important;
+  border-bottom: 1px solid var(--ld-border-subtle) !important;
+  box-shadow: none !important;
 }
 
 .md-header__title {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #FFFFFF !important;           /* bianco pulito */
+  color: var(--ld-white) !important;
 }
 
-/* --- Search bar / icona --- */
-.md-search__input {
-  background-color: #1E1E1E !important;
-  color: #E0E0E0 !important;
-  border: 1px solid #2E2E2E;
-  border-radius: 4px;
+/* ================== MENU HAMBURGER / MOBILE DRAWER ================== */
+
+.md-nav--primary,
+.md-nav--primary .md-nav__title[for="__drawer"],
+.md-nav--primary .md-nav__list,
+.md-nav--primary .md-nav__item,
+.md-nav {
+  background-color: var(--ld-drawer) !important;
 }
 
-.md-search__input::placeholder {
-  color: #777777 !important;
-}
-
-.md-search__icon {
-  color: #22C55E !important;
-}
-
-.md-search__output {
-  background-color: #1E1E1E !important;
-  border: 1px solid #2E2E2E;
-}
-
-.md-search-result__article,
-.md-search-result__title,
-.md-search-result__teaser {
-  color: #E0E0E0 !important;
-  background-color: #1E1E1E !important;
-}
-
-.md-search-result__item:hover {
-  background-color: #232323 !important;
-}
-
-/* --- Sidebar / Navigazione --- */
-.md-sidebar {
-  background-color: #121212;
-}
+/* ================== NAVBAR / INDICE ================== */
 
 .md-nav__title {
-  background-color: #121212 !important;
-  color: #FFFFFF !important;
+  background-color: transparent !important;
+  color: var(--ld-text-muted) !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.75rem 0.35rem 0.75rem;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.md-nav__title .md-nav__icon {
+  color: var(--ld-text-muted);
+  opacity: 0.6;
+}
+
+.md-nav__title::after {
+  content: none !important;
 }
 
 .md-nav__link {
-  color: #B0B0B0;
-  transition: color 0.2s ease, padding-left 0.2s ease;
+  color: var(--ld-text-muted);
+  border-left: 2px solid transparent !important;
+  transition: color 0.2s ease, padding-left 0.2s ease, border-color 0.2s ease;
 }
 
 .md-nav__link:hover,
 .md-nav__link--active {
-  color: #22C55E !important;
-  padding-left: 6px;
-  border-left: 2px solid #22C55E;
+  color: var(--ld-green) !important;
+  padding-left: 3px !important;
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: rgba(148, 163, 184, 0.6) !important;
 }
 
-/* --- Contenuto --- */
-.md-content {
-  background-color: #121212;
-}
+/* ================== TESTO E TITOLI ================== */
 
 .md-typeset h1 {
-  color: #FFFFFF;
-  font-size: 2.2rem;
+  color: var(--ld-white);
+  font-size: 2.1rem;
   letter-spacing: 0.5px;
-  border-bottom: 1px solid #2E2E2E;
-  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ld-border-subtle);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .md-typeset h2 {
-  color: #E0E0E0;
+  color: var(--ld-text-soft);
   font-size: 1.6rem;
   margin-top: 2rem;
 }
 
-.md-typeset h3 {
-  color: #22C55E;
-}
+.md-typeset h3 { color: var(--ld-green); }
 
 .md-typeset p,
 .md-typeset li {
-  color: #D4D4D4;
+  color: var(--ld-text-soft);
   line-height: 1.8;
 }
 
-/* --- Link --- */
+/* ================== LINK ================== */
+
 .md-typeset a {
-  color: #22C55E;
+  color: var(--ld-green);
   text-decoration: none;
-  border-bottom: 1px dashed rgba(34, 197, 94, 0.4);
-  transition: border-color 0.2s;
+  border-bottom: 1px dashed rgba(22, 163, 74, 0.45);
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .md-typeset a:hover {
-  border-bottom: 1px solid #22C55E;
+  border-bottom: 1px solid var(--ld-green);
+  color: var(--ld-green-light);
 }
 
-/* --- Codice --- */
+/* ================== CODICE ================== */
+
 .md-typeset code {
-  background: var(--md-code-bg-color);
-  color: var(--md-code-fg-color);
+  background: var(--ld-code-bg);
+  color: var(--ld-code-fg);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.88em;
 }
 
 .md-typeset pre {
-  background: #1E1E1E;
-  border: 1px solid #2E2E2E;
+  background: #1e1e1e;
+  border: 1px solid var(--ld-border-subtle);
   border-radius: 6px;
 }
 
-/* --- Blockquote --- */
+/* ================== BLOCKQUOTE ================== */
+
 .md-typeset blockquote {
-  border-left: 3px solid #22C55E;
-  background: #181818;
+  border-left: 3px solid var(--ld-green);
+  background: #202020;
   padding: 0.8rem 1.2rem;
   border-radius: 0 6px 6px 0;
-  color: #B0B0B0;
+  color: var(--ld-text-muted);
   font-style: italic;
 }
 
-/* --- Footer --- */
-.md-footer {
-  background: #121212;
-  border-top: 1px solid #2E2E2E;
-  color: #777777;
+/* ================== FOOTER ================== */
+
+.ld-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.85rem 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background-color: var(--ld-bg);
+  color: var(--ld-text-soft);
+  border-top: 1px solid var(--ld-border-subtle);
 }
 
-.md-footer-meta {
-  background: #0A0A0A;
+.ld-footer a {
+  color: var(--ld-green-light);
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, text-decoration-color 0.15s ease;
 }
 
-.md-footer__link,
-.md-footer-meta__inner {
-  color: #777777 !important;
+.ld-footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
 }
 
-/* --- Tabelle --- */
+.ld-footer-right span {
+  opacity: 0.7;
+  color: var(--ld-text-muted);
+  padding: 0 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .ld-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ================== TABELLE ================== */
+
 .md-typeset table {
   border-collapse: collapse;
   width: 100%;
 }
 
 .md-typeset th {
-  background: #1E1E1E;
-  color: #FFFFFF;
-  border-bottom: 2px solid #22C55E;
+  background: #1e1e1e;
+  color: var(--ld-white);
+  border-bottom: 2px solid var(--ld-green);
   padding: 10px 14px;
 }
 
 .md-typeset td {
-  background: #121212;
-  border-bottom: 1px solid #2E2E2E;
+  background: var(--ld-bg);
+  border-bottom: 1px solid var(--ld-border-subtle);
   padding: 8px 14px;
-  color: #D4D4D4;
+  color: var(--ld-text-soft);
 }
 
-/* --- Scrollbar --- */
+/* ================== SCROLLBAR ================== */
+
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #121212; }
+::-webkit-scrollbar-track { background: var(--ld-bg); }
 ::-webkit-scrollbar-thumb {
-  background: #22C55E;
+  background: var(--ld-green);
   border-radius: 3px;
+}
+
+/* Fix definitivo nav sinistra: stesso sfondo dello sfondo principale */
+.md-sidebar--primary,
+.md-sidebar--primary > .md-sidebar__scrollwrap,
+.md-sidebar--primary .md-sidebar__inner,
+.md-sidebar--primary nav.md-nav,
+.md-sidebar--primary nav.md-nav--primary,
+.md-sidebar--primary nav.md-nav--primary .md-nav__title,
+.md-sidebar--primary nav.md-nav--primary .md-nav__list,
+.md-sidebar--primary nav.md-nav--primary .md-nav__item {
+  background-color: var(--ld-bg) !important;
+  box-shadow: none !important;
+  border: none !important;
 }
