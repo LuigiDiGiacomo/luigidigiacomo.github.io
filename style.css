@@ -439,3 +439,26 @@ nav.md-nav--primary {
   font-size: 0.86rem;
   color: var(--ld-text-muted);
 }
+
+.ld-movie-corners {
+  position: relative;
+  width: 100%;
+  height: 260px;
+}
+
+.ld-movie__img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ld-green);
+}
+
+.ld-movie {
+  position: absolute;
+}
+
+.ld-movie--tl { top: 20px; left: 20px; }
+.ld-movie--tr { top: 20px; right: 20px; }
+.ld-movie--bl { bottom: 20px; left: 20px; }
+.ld-movie--br { bottom: 20px; right: 20px; }
