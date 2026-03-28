@@ -460,10 +460,10 @@ nav.md-nav--primary {
 
 /* immagine 700x700 (massimo) */
 .home-hero__img {
-  width: 700px;
-  height: 700px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 2px solid var(--ld-border-subtle);
 }
 
