@@ -1,9 +1,20 @@
-/* Testo meta (già funzionante, togliamo il rosso) */
-.md-search-result__meta {
-  color: #e5e7eb !important;  /* grigio chiaro leggibile */
+/* Barra di input (sopra) */
+.md-search__form,
+.md-search__input {
+  background-color: #111827 !important;  /* scuro, come navbar */
+  color: #f9fafb !important;
 }
 
-/* Sfondo del pannello di ricerca (quello bianco) */
-.md-search__output {
-  background-color: #020617 !important;  /* scuro come il sito */
+.md-search__input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Contenitore dei risultati (parte grigio chiaro in basso) */
+.md-search__scrollwrap {
+  background-color: #020617 !important;  /* ancora più scuro */
+}
+
+/* Testo "Scrivi per iniziare a cercare" */
+.md-search-result__meta {
+  color: #e5e7eb !important;
 }
