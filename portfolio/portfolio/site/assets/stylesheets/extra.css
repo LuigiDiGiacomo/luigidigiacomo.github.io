@@ -1,8 +1,10 @@
-/* Solo stile search, niente overlay scuri extra */
-
 /* Barra input in alto */
+.md-search__form {
+  background-color: #020617 !important;
+}
+
 .md-search__input {
-  background-color: #020617 !important;  /* stesso sfondo del sito */
+  background-color: #020617 !important;
   color: #f9fafb !important;
 }
 
@@ -10,14 +12,12 @@
   color: #9ca3af !important;
 }
 
-/* Box risultati (quello bianco in screenshot) */
+/* Box dei risultati */
 .md-search__output {
   background-color: #020617 !important;
 }
 
-/* Testo risultati */
-.md-search-result__meta,
-.md-search-result__title,
-.md-search-result__teaser {
+/* Testo dentro i risultati */
+.md-search-result__meta {
   color: #e5e7eb !important;
 }
