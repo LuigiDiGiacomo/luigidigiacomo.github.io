@@ -287,6 +287,11 @@ nav.md-nav--primary {
   border-radius: 3px;
 }
 
+/* Hover sul thumb della scrollbar di ricerca */
+.md-search__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: var(--ld-green-light);
+}
+
 /* ================== BOTTONI / CTA ================== */
 
 /* Base button */
