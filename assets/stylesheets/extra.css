@@ -30,3 +30,22 @@
 .md-search-result__teaser {
   color: var(--ld-text-soft) !important;
 }
+
+/* Testo generico nei risultati (evita nero su sfondo scuro) */
+.md-search-result__item,
+.md-search-result__item * {
+  color: var(--ld-text-soft) !important;
+}
+
+/* Link e highlight nei risultati: usa il verde del sito */
+.md-search-result__title a,
+.md-search-result__teaser a,
+.md-search__output a {
+  color: var(--ld-green) !important;
+}
+
+.md-search-result__title a:hover,
+.md-search-result__teaser a:hover,
+.md-search__output a:hover {
+  color: var(--ld-green-light) !important;
+}
