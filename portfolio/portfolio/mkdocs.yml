@@ -20,5 +20,5 @@ extra:
   
 
 extra_css:
- # - style.css
+  - style.css
   - assets/stylesheets/extra.css
