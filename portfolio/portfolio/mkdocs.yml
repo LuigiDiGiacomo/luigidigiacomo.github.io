@@ -12,7 +12,12 @@ nav:
   - Le mie esperienze: esperienze.md
   - I miei obiettivi: obiettivi.md
   - Altro: info.md
-  
+
+extra:
+  - generator: false
+  - copyright:
+    - text: "© 2026 Luigi Di Giacomo"
+
 extra_css:
   - style.css
   - assets/stylesheets/extra.css
