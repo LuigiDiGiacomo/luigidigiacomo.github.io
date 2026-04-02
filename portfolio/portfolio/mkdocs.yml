@@ -14,9 +14,7 @@ nav:
   - Altro: info.md
 
 extra:
-  - generator: false
-  - copyright:
-    - text: "© 2026 Luigi Di Giacomo"
+  generator: false
 
 extra_css:
   - style.css
